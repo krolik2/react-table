@@ -25,7 +25,6 @@ export default class FormComponent extends Component {
     });
   };
 
-
   render() {
     return (
       <Form>

@@ -1,29 +1,26 @@
 import React, { Component } from "react";
 import Table from "react-bootstrap/Table";
 
-import FormComponent from './FormComponent'
+import FormComponent from "./FormComponent";
 import TableRow from "./TableRow";
 
 export class TableComponent extends Component {
-
-
   state = {
     table: [
       {
         col1: "dummy",
         col2: "data",
         col3: "yo"
-      },
+      }
     ]
   };
 
-
-  addNewRow = (row) => {
-    let table = [...this.state.table, row]
+  addNewRow = row => {
+    let table = [...this.state.table, row];
     this.setState({
       table
-    })
-  }
+    });
+  };
 
   render() {
     return (
@@ -39,7 +36,7 @@ export class TableComponent extends Component {
           </thead>
           <TableRow table={this.state.table} />
         </Table>
-        <FormComponent addNewRow={this.addNewRow}/>
+        <FormComponent addNewRow={this.addNewRow} />
       </>
     );
   }
